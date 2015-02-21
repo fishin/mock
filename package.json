@@ -1,0 +1,30 @@
+{
+  "name": "mock",
+  "version": "0.0.3",
+  "description": "mock ======",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fishin/mock"
+  },
+  "author": "Lloyd Benson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fishin/mock/issues"
+  },
+  "homepage": "https://github.com/fishin/mock",
+  "engines": {
+    "node": ">=0.12.x"
+  },
+  "scripts": {
+    "test": "lab -a code -t 100 -v -m 2000",
+    "json": "lab -a code -r json -t 100 -o lab.json -m 2000"
+  },
+  "dependencies": {
+    "hapi": "8.x.x"
+  },
+  "devDependencies": {
+    "code": "1.x.x",
+    "lab": "5.x.x"
+  }
+}
