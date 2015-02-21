@@ -36,8 +36,8 @@ describe('mock', function () {
                 var url = server.info.uri + '/repos/org/repo/pulls';
                 server.inject({ method: 'get', url: url}, function (response) {
       
-                    console.log(response.result); 
-                    expect(response.result.length).to.equal(1); 
+                    //console.log(response.result); 
+                    expect(response.result).to.exist(); 
                     expect(response.statusCode).to.equal(200);
                     server.stop();
                     done();
