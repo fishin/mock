@@ -45,4 +45,37 @@ describe('mock', function () {
             });
         });
     });
+
+    it('add route notfound', function (done) {
+
+        var routes = [
+           {
+              method: 'get',
+              path: '/repos/org/repo/pulls',
+              file: 'notfound.json'
+
+           }
+        ];
+        Mock.prepareServer('github', routes, function(server) {
+
+            server.start(function() {
+
+                var getRoutes = server.connections[0]._router.routes.get.routes;
+                expect(getRoutes.length).to.equal(1);
+                //console.log(getRoutes);
+                var route = getRoutes[0].route;
+                expect(route.path).to.equal('/repos/org/repo/pulls');
+                expect(route.method).to.equal('get');
+                var url = server.info.uri + '/repos/org/repo/pulls';
+                server.inject({ method: 'get', url: url}, function (response) {
+      
+                    //console.log(response.result); 
+                    expect(response.result).to.exist(); 
+                    expect(response.statusCode).to.equal(200);
+                    server.stop();
+                    done();
+                });
+            });
+        });
+    });
 });
