@@ -1,0 +1,11 @@
+{
+    "startTime": 1425673986734,
+    "command": "command",
+    "pid": 8054,
+    "signal": null,
+    "code": 0,
+    "stdout": "command output",
+    "stderr": "",
+    "status": "succeeded",
+    "finishTime": 1425673986741
+}
