@@ -35,9 +35,9 @@ describe('mock', function () {
                 expect(route.method).to.equal('get');
                 var url = server.info.uri + '/repos/org/repo/pulls';
                 server.inject({ method: 'get', url: url}, function (response) {
-      
-                    //console.log(response.result); 
-                    expect(response.result).to.exist(); 
+
+                    //console.log(response.result);
+                    expect(response.result).to.exist();
                     expect(response.statusCode).to.equal(200);
                     server.stop();
                     done();
@@ -68,9 +68,9 @@ describe('mock', function () {
                 expect(route.method).to.equal('get');
                 var url = server.info.uri + '/repos/org/repo/pulls';
                 server.inject({ method: 'get', url: url}, function (response) {
-      
-                    //console.log(response.result); 
-                    expect(response.result).to.exist(); 
+
+                    //console.log(response.result);
+                    expect(response.result).to.exist();
                     expect(response.statusCode).to.equal(200);
                     server.stop();
                     done();
@@ -101,9 +101,9 @@ describe('mock', function () {
                 expect(route.method).to.equal('get');
                 var url = server.info.uri + '/repos/org/repo/pulls';
                 server.inject({ method: 'get', url: url}, function (response) {
-      
+
                     //console.log(response.result);
-                    expect(response.result.trim()).to.equal('error'); 
+                    expect(response.result.trim()).to.equal('error');
                     expect(response.statusCode).to.equal(200);
                     server.stop();
                     done();
