@@ -111,4 +111,36 @@ describe('mock', function () {
             });
         });
     });
+
+    it('add function nocb', function (done) {
+        var functions = [
+           {
+              name: 'runCommand',
+              file: 'succeeded.json'
+           }
+        ];
+        var library = Mock.prepareLibrary('smelt', functions);
+        var result = library.runCommand();
+        //console.log(result);
+        expect(result.command).to.equal('command');
+        expect(result.status).to.equal('succeeded');
+        done();
+    });
+
+    it('add function cb', function (done) {
+        var functions = [
+           {
+              name: 'runCommand',
+              file: 'succeeded.json'
+           }
+        ];
+        Mock.prepareLibrary('smelt', functions, function(library) {
+
+            var result = library.runCommand();
+            //console.log(result);
+            expect(result.command).to.equal('command');
+            expect(result.status).to.equal('succeeded');
+            done();
+        });
+    });
 });
