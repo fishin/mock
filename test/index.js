@@ -23,9 +23,9 @@ describe('mock', function () {
 
            }
         ];
-        Mock.prepareServer('github', routes, function(server) {
+        Mock.prepareServer('github', routes, function (server) {
 
-            server.start(function() {
+            server.start(function () {
 
                 var getRoutes = server.connections[0]._router.routes.get.routes;
                 expect(getRoutes.length).to.equal(1);
@@ -56,9 +56,9 @@ describe('mock', function () {
 
            }
         ];
-        Mock.prepareServer('github', routes, function(server) {
+        Mock.prepareServer('github', routes, function (server) {
 
-            server.start(function() {
+            server.start(function () {
 
                 var getRoutes = server.connections[0]._router.routes.get.routes;
                 expect(getRoutes.length).to.equal(1);
@@ -89,9 +89,9 @@ describe('mock', function () {
 
            }
         ];
-        Mock.prepareServer('github', routes, function(server) {
+        Mock.prepareServer('github', routes, function (server) {
 
-            server.start(function() {
+            server.start(function () {
 
                 var getRoutes = server.connections[0]._router.routes.get.routes;
                 expect(getRoutes.length).to.equal(1);
@@ -113,6 +113,7 @@ describe('mock', function () {
     });
 
     it('add function nocb', function (done) {
+
         var functions = [
            {
               name: 'runCommand',
@@ -128,13 +129,14 @@ describe('mock', function () {
     });
 
     it('add function cb', function (done) {
+
         var functions = [
            {
               name: 'runCommand',
               file: 'succeeded.json'
            }
         ];
-        Mock.prepareLibrary('smelt', functions, function(library) {
+        Mock.prepareLibrary('smelt', functions, function (library) {
 
             var result = library.runCommand();
             //console.log(result);
