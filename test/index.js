@@ -112,6 +112,85 @@ describe('mock', function () {
         });
     });
 
+    it('add route empty.txt', function (done) {
+
+        var routes = [
+           {
+              method: 'get',
+              path: '/empty',
+              file: 'empty.txt'
+
+           }
+        ];
+        Mock.prepareServer('tacklebox', routes, function (server) {
+
+            server.start(function () {
+
+                var url = server.info.uri + '/empty';
+                server.inject({ method: 'get', url: url}, function (response) {
+
+                    expect(response.statusCode).to.equal(200);
+                    expect(response.result).to.equal('');
+                    server.stop();
+                    done();
+                });
+            });
+        });
+    });
+
+
+    it('add route true', function (done) {
+
+        var routes = [
+           {
+              method: 'get',
+              path: '/api/user/1/validate',
+              file: 'true'
+
+           }
+        ];
+        Mock.prepareServer('tacklebox', routes, function (server) {
+
+            server.start(function () {
+
+                var url = server.info.uri + '/api/user/1/validate';
+                server.inject({ method: 'get', url: url}, function (response) {
+
+                    //console.log(response.result);
+                    expect(response.result).to.be.true();
+                    server.stop();
+                    done();
+                });
+            });
+        });
+    });
+
+    it('add route false', function (done) {
+
+        var routes = [
+           {
+              method: 'get',
+              path: '/api/user/1/validate',
+              file: 'false'
+
+           }
+        ];
+        Mock.prepareServer('tacklebox', routes, function (server) {
+
+            server.start(function () {
+
+                var url = server.info.uri + '/api/user/1/validate';
+                server.inject({ method: 'get', url: url}, function (response) {
+
+                    //console.log(response.result);
+                    expect(response.result).to.be.false();
+                    server.stop();
+                    done();
+                });
+            });
+        });
+    });
+
     it('add function nocb', function (done) {
 
         var functions = [
