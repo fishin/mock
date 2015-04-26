@@ -1,18 +1,18 @@
 [
     {
-        commit: '5a606ffc941673f3b8a6366ba7a596c044c6ba97',
-        shortCommit: '5a606ff',
-        authorName: 'lloydbenson',
-        authorEmail: '<lloyd.benson@gmail.com>',
-        authorDate: '2015-04-25 12:41:23',
-        message: 'add token to api check too'
+        "commit": "5a606ffc941673f3b8a6366ba7a596c044c6ba97",
+        "shortCommit": "5a606ff",
+        "authorName": "lloydbenson",
+        "authorEmai"l: "<lloyd.benson@gmail.com>",
+        "authorDate": "2015-04-25 12:41:23",
+        "message": "add token to api check too"
     },
     {
-        commit: '4a369bddd552fe2a35cb4f71da8a942c84234a3d',
-        shortCommit: '4a369bd',
-        authorName: 'lloydbenson',
-        authorEmail: '<lloyd.benson@gmail.com>',
-        authorDate: '2015-04-24 15:22:13',
-        message: 'fix up style'
+        "commit": "4a369bddd552fe2a35cb4f71da8a942c84234a3d",
+        "shortCommit": "4a369bd",
+        "authorName": "lloydbenson",
+        "authorEmail": "<lloyd.benson@gmail.com>",
+        "authorDate": "2015-04-24 15:22:13",
+        "message": "fix up style"
     }
 ]
