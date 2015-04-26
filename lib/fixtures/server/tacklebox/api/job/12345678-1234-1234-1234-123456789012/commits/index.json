@@ -3,7 +3,7 @@
         "commit": "5a606ffc941673f3b8a6366ba7a596c044c6ba97",
         "shortCommit": "5a606ff",
         "authorName": "lloydbenson",
-        "authorEmai"l: "<lloyd.benson@gmail.com>",
+        "authorEmail": "<lloyd.benson@gmail.com>",
         "authorDate": "2015-04-25 12:41:23",
         "message": "add token to api check too"
     },
