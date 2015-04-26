@@ -1,0 +1,9 @@
+{
+    "name": "reel1",
+    "host": "localhost",
+    "port": 8081,
+    "size": 4,
+    "id": "12345678-1234-1234-1234-123456789012",
+    "status": "created",
+    "createTime": 1430051994969
+}
