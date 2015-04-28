@@ -122,5 +122,19 @@
         "updateTime": 1429473648543,
         "finishTime": 1429473648543,
         "elapsedTime": 2021
+    },
+    {
+        "commands": [
+            {
+                "command": "died",
+                "startTime": 1429473646522,
+                "pid": 12193
+            }
+        ],
+        "status": "started",
+        "id": "12345678-1234-1234-1234-123456789016",
+        "createTime": 1429473646521,
+        "startTime": 1429473646522,
+        "updateTime": 1429473648543
     }
 ]
