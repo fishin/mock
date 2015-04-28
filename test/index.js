@@ -191,6 +191,33 @@ describe('mock', function () {
         });
     });
 
+    it('add route null', function (done) {
+
+        var routes = [
+           {
+              method: 'get',
+              path: '/api/user/byname/admin',
+              file: 'null'
+
+           }
+        ];
+        Mock.prepareServer('tacklebox', routes, function (server) {
+
+            server.start(function () {
+
+                var url = server.info.uri + '/api/user/byname/admin';
+                server.inject({ method: 'get', url: url}, function (response) {
+
+                    //console.log(response.result);
+                    expect(response.result).to.not.exist();
+                    server.stop();
+                    done();
+                });
+            });
+        });
+    });
+
+
     it('add function nocb', function (done) {
 
         var functions = [
