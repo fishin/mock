@@ -1,0 +1,158 @@
+[
+    {
+        "commands": [
+            {
+                "command": "npm install",
+                "stderr": "",
+                "stdout": "",
+                "startTime": 1429473646522,
+                "pid": 12193,
+                "finishTime": 1429473646530,
+                "code": 0,
+                "signal": null
+            },
+            {
+                "command": "npm run-script json",
+                "stderr": "",
+                "stdout": "",
+                "startTime": 1429473646530,
+                "pid": 12194,
+                "finishTime": 1429473648538,
+                "code": 0,
+                "signal": null
+            }
+        ],
+        "status": "succeeded",
+        "id": "12345678-1234-1234-1234-123456789012",
+        "commit": "0d2111054a1d3319906f9cabbb57218db9c517e5",
+        "checkout": {
+            "startTime": 1430220946527,
+            "finishTime": 1430220947110,
+            "status": "succeeded",
+            "commands": [
+                {
+                    "command": "git clone",
+                    "stderr": "",
+                    "stdout": "",
+                    "startTime": 1429473646522,
+                    "pid": 12193,
+                    "finishTime": 1429473646530,
+                    "code": 0,
+                    "signal": null
+                }
+            ]
+        },
+        "createTime": 1429473646521,
+        "startTime": 1429473646522,
+        "updateTime": 1429473648543,
+        "finishTime": 1429473648543,
+        "elapsedTime": 2021
+    },
+    {
+        "commands": [
+            {
+                "command": "command1",
+                "stderr": "",
+                "stdout": "",
+                "startTime": 1429473646522,
+                "pid": 12193,
+                "finishTime": 1429473646530,
+                "code": 0,
+                "signal": null
+            },
+            {
+                "command": "command2",
+                "stderr": "",
+                "stdout": "",
+                "startTime": 1429473646530,
+                "pid": 12194,
+                "finishTime": 1429473648538,
+                "code": 0,
+                "signal": null
+            }
+        ],
+        "status": "succeeded",
+        "id": "12345678-1234-1234-1234-123456789013",
+        "createTime": 1429473646521,
+        "startTime": 1429473646522,
+        "updateTime": 1429473648543,
+        "finishTime": 1429473648543,
+        "elapsedTime": 2021
+    },
+    {
+        "commands": [
+            {
+                "command": "command1",
+                "stderr": "",
+                "stdout": "",
+                "startTime": 1429473646522,
+                "pid": 12193,
+                "finishTime": 1429473646530,
+                "code": 0,
+                "signal": null
+            },
+            {
+                "command": "command2",
+                "stderr": "",
+                "stdout": "",
+                "startTime": 1429473646530,
+                "pid": 12194,
+                "finishTime": 1429473648538,
+                "code": 0,
+                "signal": null
+            }
+        ],
+        "status": "failed",
+        "id": "12345678-1234-1234-1234-123456789014",
+        "createTime": 1429473646521,
+        "startTime": 1429473646522,
+        "updateTime": 1429473648543,
+        "finishTime": 1429473648543,
+        "elapsedTime": 2021
+    },
+    {
+        "commands": [
+            {
+                "command": "command1",
+                "stderr": "",
+                "stdout": "",
+                "startTime": 1429473646522,
+                "pid": 12193,
+                "finishTime": 1429473646530,
+                "code": 0,
+                "signal": null
+            },
+            {
+                "command": "command2",
+                "stderr": "",
+                "stdout": "",
+                "startTime": 1429473646530,
+                "pid": 12194,
+                "finishTime": 1429473648538,
+                "code": 0,
+                "signal": null
+            }
+        ],
+        "status": "cancelled",
+        "id": "12345678-1234-1234-1234-123456789015",
+        "createTime": 1429473646521,
+        "startTime": 1429473646522,
+        "updateTime": 1429473648543,
+        "finishTime": 1429473648543,
+        "elapsedTime": 2021
+    },
+    {
+        "commands": [
+            {
+                "command": "died",
+                "startTime": 1429473646522,
+                "pid": 12193
+            }
+        ],
+        "status": "started",
+        "id": "12345678-1234-1234-1234-123456789016",
+        "createTime": 1429473646521,
+        "startTime": 1429473646522,
+        "updateTime": 1429473648543
+    }
+]
