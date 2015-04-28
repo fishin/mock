@@ -1,0 +1,21 @@
+{
+    "commands": [
+        {
+            "command": "invalid",
+            "stderr": "",
+            "stdout": "",
+            "startTime": 1429473646522,
+            "pid": 12193,
+            "finishTime": 1429473646530,
+            "code": 1,
+            "signal": null
+        }
+    ],
+    "status": "failed",
+    "id": "12345678-1234-1234-1234-123456789014",
+    "createTime": 1429473646521,
+    "startTime": 1429473646522,
+    "updateTime": 1429473648543,
+    "finishTime": 1429473648543,
+    "elapsedTime": 2021
+}
