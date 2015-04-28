@@ -3,6 +3,12 @@
     "head": [ "date" ],
     "body": [ "uptime" ],
     "tail": [ "cat /etc/hosts" ],
+    "scm": {
+        "type": "git",
+        "url": "https://github.com/org/repo",
+        "branch": "master",
+        "runOnCommit": true
+    },
     "id": "12345678-1234-1234-1234-123456789013",
     "status": "created",
     "createTime": 1429473130828
