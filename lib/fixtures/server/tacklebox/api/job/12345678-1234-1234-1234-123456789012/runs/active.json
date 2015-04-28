@@ -4,7 +4,7 @@
             {
                 "command": "npm install",
                 "startTime": 1429473646522,
-                "pid": 12193,
+                "pid": 12193
             },
             {
                 "command": "npm run-script json"
