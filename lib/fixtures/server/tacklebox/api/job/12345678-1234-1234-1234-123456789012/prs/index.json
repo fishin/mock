@@ -1,0 +1,20 @@
+[
+    {
+        "number": 1,
+        "title": "mock pr",
+        "merge_commit_sha": "362563b3baa17061b68be09974320a411071c945",
+        "head": {
+            "label": "lloydbenson:master",
+            "sha": "819537479f84f3e844205583760ecf4959ea828a"
+        }
+    },
+    {
+        "number": 2,
+        "title": "mock pr2",
+        "merge_commit_sha": "362563b3baa17061b68be09974320a411071c945",
+        "head": {
+            "label": "lloydbenson:master",
+            "sha": "819537479f84f3e844205583760ecf4959ea828a"
+        }
+    }
+]

@@ -1,0 +1,341 @@
+{
+  "tests": {
+    "command": [
+      {
+        "title": "runCommand valid",
+        "err": false,
+        "duration": 18
+      },
+      {
+        "title": "runCommand invalid command",
+        "err": false,
+        "duration": 5
+      },
+      {
+        "title": "runCommand invalid path",
+        "err": false,
+        "duration": 0
+      },
+      {
+        "title": "runCommand failed",
+        "err": false,
+        "duration": 5
+      }
+    ]
+  },
+  "duration": 30,
+  "leaks": [],
+  "coverage": {
+    "sloc": 56,
+    "hits": 56,
+    "misses": 0,
+    "percent": 100,
+    "files": [
+      {
+        "filename": "lib/index.js",
+        "percent": 100,
+        "hits": 56,
+        "misses": 0,
+        "sloc": 56,
+        "source": {
+          "1": {
+            "source": "var Child = require('child_process');",
+            "hits": 1,
+            "miss": false
+          },
+          "2": {
+            "source": "var Fs = require('fs');",
+            "hits": 1,
+            "miss": false
+          },
+          "3": {
+            "source": "var Hoek = require('hoek');",
+            "hits": 1,
+            "miss": false
+          },
+          "4": {
+            "source": "",
+            "miss": false
+          },
+          "5": {
+            "source": "var internals = {",
+            "hits": 1,
+            "miss": false
+          },
+          "6": {
+            "source": "    defaults: {",
+            "miss": false
+          },
+          "7": {
+            "source": "        dirPath: process.cwd()",
+            "miss": false
+          },
+          "8": {
+            "source": "    }",
+            "miss": false
+          },
+          "9": {
+            "source": "};",
+            "miss": false
+          },
+          "10": {
+            "source": "",
+            "miss": false
+          },
+          "11": {
+            "source": "module.exports = internals.Smelt = function (options) {",
+            "hits": 1,
+            "miss": false
+          },
+          "12": {
+            "source": "",
+            "miss": false
+          },
+          "13": {
+            "source": "    internals.Smelt.settings = Hoek.applyToDefaults(internals.defaults, options);",
+            "hits": 4,
+            "miss": false
+          },
+          "14": {
+            "source": "    this.runCommand = exports.runCommand;",
+            "hits": 4,
+            "miss": false
+          },
+          "15": {
+            "source": "};",
+            "miss": false
+          },
+          "16": {
+            "source": "",
+            "miss": false
+          },
+          "17": {
+            "source": "internals.splitCommand = function (cmd) {",
+            "hits": 1,
+            "miss": false
+          },
+          "18": {
+            "source": "",
+            "miss": false
+          },
+          "19": {
+            "source": "    var parts = cmd.split(' ');",
+            "hits": 3,
+            "miss": false
+          },
+          "20": {
+            "source": "    var mainCommand = parts[0];",
+            "hits": 3,
+            "miss": false
+          },
+          "21": {
+            "source": "    var args = [];",
+            "hits": 3,
+            "miss": false
+          },
+          "22": {
+            "source": "    for (var i = 1; i < parts.length; i++) {",
+            "hits": 3,
+            "miss": false
+          },
+          "23": {
+            "source": "        args.push(parts[i]);",
+            "hits": 1,
+            "miss": false
+          },
+          "24": {
+            "source": "    }",
+            "miss": false
+          },
+          "25": {
+            "source": "    return { cmd: mainCommand, args: args };",
+            "hits": 3,
+            "miss": false
+          },
+          "26": {
+            "source": "};",
+            "miss": false
+          },
+          "27": {
+            "source": "",
+            "miss": false
+          },
+          "28": {
+            "source": "exports.runCommand = function (cmd, callback) {",
+            "hits": 1,
+            "miss": false
+          },
+          "29": {
+            "source": "",
+            "miss": false
+          },
+          "30": {
+            "source": "    if (Fs.existsSync(internals.Smelt.settings.dirPath)) {",
+            "hits": 4,
+            "miss": false
+          },
+          "31": {
+            "source": "        var result = {};",
+            "hits": 3,
+            "miss": false
+          },
+          "32": {
+            "source": "        result.startTime = new Date().getTime();",
+            "hits": 3,
+            "miss": false
+          },
+          "33": {
+            "source": "        var command = internals.splitCommand(cmd);",
+            "hits": 3,
+            "miss": false
+          },
+          "34": {
+            "source": "        var origDir = process.cwd();",
+            "hits": 3,
+            "miss": false
+          },
+          "35": {
+            "source": "        process.chdir(internals.Smelt.settings.dirPath);",
+            "hits": 3,
+            "miss": false
+          },
+          "36": {
+            "source": "        var cmdResult = Child.spawnSync(command.cmd, command.args, { cwd: internals.Smelt.settings.dirPath });",
+            "hits": 3,
+            "miss": false
+          },
+          "37": {
+            "source": "        process.chdir(origDir);",
+            "hits": 3,
+            "miss": false
+          },
+          "38": {
+            "source": "        result.command = cmd;",
+            "hits": 3,
+            "miss": false
+          },
+          "39": {
+            "source": "        result.pid = cmdResult.pid;",
+            "hits": 3,
+            "miss": false
+          },
+          "40": {
+            "source": "        result.signal = cmdResult.signal;",
+            "hits": 3,
+            "miss": false
+          },
+          "41": {
+            "source": "        result.code = cmdResult.status;",
+            "hits": 3,
+            "miss": false
+          },
+          "42": {
+            "source": "        if (cmdResult.error) {",
+            "hits": 3,
+            "miss": false
+          },
+          "43": {
+            "source": "            result.error = cmdResult.error.toString().trim();",
+            "hits": 1,
+            "miss": false
+          },
+          "44": {
+            "source": "            result.status = 'failed';",
+            "hits": 1,
+            "miss": false
+          },
+          "45": {
+            "source": "        }",
+            "miss": false
+          },
+          "46": {
+            "source": "        if (cmdResult.stdout) {",
+            "hits": 3,
+            "miss": false
+          },
+          "47": {
+            "source": "            result.stdout = cmdResult.stdout.toString().trim();",
+            "hits": 2,
+            "miss": false
+          },
+          "48": {
+            "source": "        }",
+            "miss": false
+          },
+          "49": {
+            "source": "        if (cmdResult.stderr) {",
+            "hits": 3,
+            "miss": false
+          },
+          "50": {
+            "source": "            result.stderr = cmdResult.stderr.toString().trim();",
+            "hits": 2,
+            "miss": false
+          },
+          "51": {
+            "source": "        }",
+            "miss": false
+          },
+          "52": {
+            "source": "        if (result.code === 0) {",
+            "hits": 3,
+            "miss": false
+          },
+          "53": {
+            "source": "            result.status = 'succeeded';",
+            "hits": 1,
+            "miss": false
+          },
+          "54": {
+            "source": "        } else {",
+            "miss": false
+          },
+          "55": {
+            "source": "            result.status = 'failed';",
+            "hits": 2,
+            "miss": false
+          },
+          "56": {
+            "source": "        }",
+            "miss": false
+          },
+          "57": {
+            "source": "        result.finishTime = new Date().getTime();",
+            "hits": 3,
+            "miss": false
+          },
+          "58": {
+            "source": "        return result;",
+            "hits": 3,
+            "miss": false
+          },
+          "59": {
+            "source": "    }",
+            "miss": false
+          },
+          "60": {
+            "source": "    return {",
+            "hits": 1,
+            "miss": false
+          },
+          "61": {
+            "source": "        error: 'invalid path: ' + internals.Smelt.settings.dirPath",
+            "miss": false
+          },
+          "62": {
+            "source": "    };",
+            "miss": false
+          },
+          "63": {
+            "source": "};",
+            "miss": false
+          },
+          "64": {
+            "source": "",
+            "miss": false
+          }
+        }
+      }
+    ]
+  }
+}
