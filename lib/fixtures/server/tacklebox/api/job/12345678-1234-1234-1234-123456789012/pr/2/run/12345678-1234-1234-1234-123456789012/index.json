@@ -5,18 +5,8 @@
             "stderr": "",
             "stdout": "",
             "startTime": 1429473646522,
-            "pid": 12193,
+            "pid": 1235,
             "finishTime": 1429473646530,
-            "code": 0,
-            "signal": null
-        },
-        {
-            "command": "sleep 2",
-            "stderr": "",
-            "stdout": "",
-            "startTime": 1429473646530,
-            "pid": 12194,
-            "finishTime": 1429473648538,
             "code": 0,
             "signal": null
         },
@@ -25,7 +15,7 @@
             "stderr": "",
             "stdout": "Sun Apr 19 15:00:48 CDT 2015\n",
             "startTime": 1429473648538,
-            "pid": 12199,
+            "pid": 1234,
             "finishTime": 1429473648543,
             "code": 0,
             "signal": null
