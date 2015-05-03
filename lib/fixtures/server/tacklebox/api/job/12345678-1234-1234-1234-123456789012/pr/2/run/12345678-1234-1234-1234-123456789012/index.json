@@ -12,20 +12,10 @@
         },
         {
             "command": "date",
-            "stderr": "",
-            "stdout": "Sun Apr 19 15:00:48 CDT 2015\n",
-            "startTime": 1429473648538,
-            "pid": 1234,
-            "finishTime": 1429473648543,
-            "code": 0,
-            "signal": null
         }
     ],
-    "status": "succeeded",
+    "status": "started",
     "id": "12345678-1234-1234-1234-123456789012",
     "createTime": 1429473646521,
-    "startTime": 1429473646522,
-    "updateTime": 1429473648543,
-    "finishTime": 1429473648543,
-    "elapsedTime": 2021
+    "startTime": 1429473646522
 }
