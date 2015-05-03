@@ -6,10 +6,10 @@
             "pid": 1234
         },
         {
-            "command": "sleep 2",
+            "command": "sleep 2"
         },
         {
-            "command": "date",
+            "command": "date"
         }
     ],
     "status": "started",
