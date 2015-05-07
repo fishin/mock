@@ -1,0 +1,40 @@
+{
+    "name": "job1",
+    "description": "",
+    "head": [],
+    "body": [
+        "npm install",
+        "npm run-script json"
+    ],
+    "tail": [],
+    "scm": {
+        "type": "git",
+        "url": "https://github.com/org/repo",
+        "branch": "master",
+        "prs": true,
+        "runOnCommit": false
+    },
+    "schedule": {
+        "type": "cron",
+        "pattern": "*/5 * * * *"
+    },
+    "archive": {
+        "pattern": "lab.json"
+    },
+    "notify": {
+        "type": "email",
+        "to": "lloyd.benson@gmail.com",
+        "subject": "{jobName} {status}",
+        "message": "http://localhost:8080/view/job/{jobId}/run/{runId}",
+        "statuses": [
+            "failed",
+            "fixed",
+            "cancelled",
+            "succeeded"
+        ]
+    },
+    "id": "12345678-1234-1234-1234-123456789012",
+    "status": "created",
+    "createTime": 1428685562829,
+    "updateTime": 1429355427653
+}
