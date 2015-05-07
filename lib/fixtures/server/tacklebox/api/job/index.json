@@ -1,40 +1,24 @@
 {
     "name": "job1",
-    "description": "",
-    "head": [],
-    "body": [
-        "npm install",
-        "npm run-script json"
-    ],
-    "tail": [],
-    "scm": {
-        "type": "git",
-        "url": "https://github.com/org/repo",
-        "branch": "master",
-        "prs": true,
-        "runOnCommit": false
-    },
-    "schedule": {
-        "type": "cron",
-        "pattern": "*/5 * * * *"
-    },
-    "archive": {
-        "pattern": "lab.json"
-    },
-    "notify": {
-        "type": "email",
-        "to": "lloyd.benson@gmail.com",
-        "subject": "{jobName} {status}",
-        "message": "http://localhost:8080/view/job/{jobId}/run/{runId}",
-        "statuses": [
-            "failed",
-            "fixed",
-            "cancelled",
-            "succeeded"
-        ]
-    },
-    "id": "12345678-1234-1234-1234-123456789012",
-    "status": "created",
-    "createTime": 1428685562829,
-    "updateTime": 1429355427653
+    "description": "desc",
+    "headCommand0": "head",
+    "bodyCommand0": "npm install",
+    "bodyCommand1": "npm run-script json",
+    "tailCommand0": "tail.sh",
+    "scmType": "git",
+    "scmUrl": "https://github.com/org/repo",
+    "scmBranch": "master",
+    "scmPrs": true,
+    "scmRunOnCommit": false,
+    "scheduleType": "cron",
+    "schedulePattern": "*/5 * * * *"
+    "archivePattern": "lab.json",
+    "notifyType": "email",
+    "notifyTo": "lloyd.benson@gmail.com",
+    "notifySubject": "{jobName} {status}",
+    "notifyMessage": "http://localhost:8080/view/job/{jobId}/run/{runId}",
+    "notifyStatusFailed": true,
+    "notifyStatusFixed": true,
+    "notifyStatusCancelled": true,
+    "notifyStatusSucceeded": true
 }
