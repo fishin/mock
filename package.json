@@ -2,7 +2,7 @@
   "name": "mock",
   "version": "0.0.3",
   "description": "mock ======",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/fishin/mock"
