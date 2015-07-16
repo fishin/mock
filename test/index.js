@@ -34,7 +34,7 @@ describe('mock', function () {
                 expect(route.path).to.equal('/repos/org/repo/pulls');
                 expect(route.method).to.equal('get');
                 var url = server.info.uri + '/repos/org/repo/pulls';
-                server.inject({ method: 'get', url: url}, function (response) {
+                server.inject({ method: 'get', url: url }, function (response) {
 
                     //console.log(response.result);
                     expect(response.result).to.exist();
@@ -67,7 +67,7 @@ describe('mock', function () {
                 expect(route.path).to.equal('/repos/org/repo/pulls');
                 expect(route.method).to.equal('get');
                 var url = server.info.uri + '/repos/org/repo/pulls';
-                server.inject({ method: 'get', url: url}, function (response) {
+                server.inject({ method: 'get', url: url }, function (response) {
 
                     //console.log(response.result);
                     expect(response.result).to.exist();
@@ -100,7 +100,7 @@ describe('mock', function () {
                 expect(route.path).to.equal('/repos/org/repo/pulls');
                 expect(route.method).to.equal('get');
                 var url = server.info.uri + '/repos/org/repo/pulls';
-                server.inject({ method: 'get', url: url}, function (response) {
+                server.inject({ method: 'get', url: url }, function (response) {
 
                     //console.log(response.result);
                     expect(response.result.trim()).to.equal('error');
@@ -127,7 +127,7 @@ describe('mock', function () {
             server.start(function () {
 
                 var url = server.info.uri + '/empty';
-                server.inject({ method: 'get', url: url}, function (response) {
+                server.inject({ method: 'get', url: url }, function (response) {
 
                     expect(response.statusCode).to.equal(200);
                     expect(response.result).to.equal('');
@@ -154,7 +154,7 @@ describe('mock', function () {
             server.start(function () {
 
                 var url = server.info.uri + '/api/user/1/validate';
-                server.inject({ method: 'get', url: url}, function (response) {
+                server.inject({ method: 'get', url: url }, function (response) {
 
                     //console.log(response.result);
                     expect(response.result).to.be.true();
@@ -180,7 +180,7 @@ describe('mock', function () {
             server.start(function () {
 
                 var url = server.info.uri + '/api/user/1/validate';
-                server.inject({ method: 'get', url: url}, function (response) {
+                server.inject({ method: 'get', url: url }, function (response) {
 
                     //console.log(response.result);
                     expect(response.result).to.be.false();
@@ -206,7 +206,7 @@ describe('mock', function () {
             server.start(function () {
 
                 var url = server.info.uri + '/api/user/byname/admin';
-                server.inject({ method: 'get', url: url}, function (response) {
+                server.inject({ method: 'get', url: url }, function (response) {
 
                     //console.log(response.result);
                     expect(response.result).to.not.exist();
