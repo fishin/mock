@@ -1,3 +1,4 @@
 node_modules
-./lab.json
-npm-debug.log
+lab.json
+lab.html
+console.log
