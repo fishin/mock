@@ -16,12 +16,11 @@ describe('mock', function () {
     it('add route', function (done) {
 
         var routes = [
-           {
-              method: 'get',
-              path: '/repos/org/repo/pulls',
-              file: 'index.json'
-
-           }
+            {
+                method: 'get',
+                path: '/repos/org/repo/pulls',
+                file: 'index.json'
+            }
         ];
         Mock.prepareServer('github', routes, function (server) {
 
@@ -49,12 +48,11 @@ describe('mock', function () {
     it('add route notfound', function (done) {
 
         var routes = [
-           {
-              method: 'get',
-              path: '/repos/org/repo/pulls',
-              file: 'notfound.json'
-
-           }
+            {
+                method: 'get',
+                path: '/repos/org/repo/pulls',
+                file: 'notfound.json'
+            }
         ];
         Mock.prepareServer('github', routes, function (server) {
 
@@ -82,12 +80,11 @@ describe('mock', function () {
     it('add route error.txt', function (done) {
 
         var routes = [
-           {
-              method: 'get',
-              path: '/repos/org/repo/pulls',
-              file: 'error.txt'
-
-           }
+            {
+                method: 'get',
+                path: '/repos/org/repo/pulls',
+                file: 'error.txt'
+            }
         ];
         Mock.prepareServer('github', routes, function (server) {
 
@@ -115,12 +112,11 @@ describe('mock', function () {
     it('add route empty.txt', function (done) {
 
         var routes = [
-           {
-              method: 'get',
-              path: '/empty',
-              file: 'empty.txt'
-
-           }
+            {
+                method: 'get',
+                path: '/empty',
+                file: 'empty.txt'
+            }
         ];
         Mock.prepareServer('tacklebox', routes, function (server) {
 
@@ -142,12 +138,11 @@ describe('mock', function () {
     it('add route true', function (done) {
 
         var routes = [
-           {
-              method: 'get',
-              path: '/api/user/1/validate',
-              file: 'true'
-
-           }
+            {
+                method: 'get',
+                path: '/api/user/1/validate',
+                file: 'true'
+            }
         ];
         Mock.prepareServer('tacklebox', routes, function (server) {
 
@@ -168,12 +163,11 @@ describe('mock', function () {
     it('add route false', function (done) {
 
         var routes = [
-           {
-              method: 'get',
-              path: '/api/user/1/validate',
-              file: 'false'
-
-           }
+            {
+                method: 'get',
+                path: '/api/user/1/validate',
+                file: 'false'
+            }
         ];
         Mock.prepareServer('tacklebox', routes, function (server) {
 
@@ -194,12 +188,11 @@ describe('mock', function () {
     it('add route null', function (done) {
 
         var routes = [
-           {
-              method: 'get',
-              path: '/api/user/byname/admin',
-              file: 'null'
-
-           }
+            {
+                method: 'get',
+                path: '/api/user/byname/admin',
+                file: 'null'
+            }
         ];
         Mock.prepareServer('tacklebox', routes, function (server) {
 
@@ -221,10 +214,10 @@ describe('mock', function () {
     it('add function nocb', function (done) {
 
         var functions = [
-           {
-              name: 'runCommand',
-              file: 'succeeded.json'
-           }
+            {
+                name: 'runCommand',
+                file: 'succeeded.json'
+            }
         ];
         var library = Mock.prepareLibrary('smelt', functions);
         var result = library.runCommand();
@@ -237,10 +230,10 @@ describe('mock', function () {
     it('add function cb', function (done) {
 
         var functions = [
-           {
-              name: 'runCommand',
-              file: 'succeeded.json'
-           }
+            {
+                name: 'runCommand',
+                file: 'succeeded.json'
+            }
         ];
         Mock.prepareLibrary('smelt', functions, function (library) {
 
