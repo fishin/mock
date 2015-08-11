@@ -19,6 +19,7 @@
         "pattern": "*/5 * * * *"
     },
     "archive": {
+        "type": "none",
         "pattern": "lab.json"
     },
     "notify": {
