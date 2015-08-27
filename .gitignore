@@ -1,1 +1,4 @@
 node_modules
+/test.lab
+/test.html
+/test.log
