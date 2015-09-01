@@ -1,9 +1,10 @@
 {
     "number": 1,
     "title": "mock pr",
-    "merge_commit_sha": "362563b3baa17061b68be09974320a411071c945",
-    "head": {
-        "label": "lloydbenson:master",
-        "sha": "819537479f84f3e844205583760ecf4959ea828a"
-    }
+    "commit": "819537479f84f3e844205583760ecf4959ea828a"
+    "remoteUser": "lloyd"
+    "remoteBranch": "master",
+    "mergeCommit": "3f1f7e8c570e5d5c240a614e96d9e68c6c6958e5",
+    "shortCommit": "8195374",
+    "repoUrl": "https://github.com/org/repo"
 }
