@@ -2,9 +2,9 @@
     "number": 1,
     "title": "mock pr",
     "commit": "819537479f84f3e844205583760ecf4959ea828a"
-    "remoteUser": "lloyd"
+    "remoteUser": "lloydbenson"
     "remoteBranch": "master",
-    "mergeCommit": "3f1f7e8c570e5d5c240a614e96d9e68c6c6958e5",
+    "mergeCommit": "362563b3baa17061b68be09974320a411071c945",
     "shortCommit": "8195374",
     "repoUrl": "https://github.com/org/repo"
 }
