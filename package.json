@@ -22,7 +22,9 @@
     "test": "lab -a code -t 100 -v -m 2000 -L -r json -o test.lab -r html -o test.html -r console -o stdout -r console -o test.log"
   },
   "dependencies": {
-    "hapi": "8.x.x"
+    "inert": "3.x.x",
+    "hapi": "10.x.x",
+    "hoek": "2.x.x"
   },
   "devDependencies": {
     "code": "1.x.x",

@@ -1,4 +1,5 @@
 var Code = require('code');
+var Hoek = require('hoek');
 var Lab = require('lab');
 
 var Mock = require('../lib');
@@ -38,7 +39,7 @@ describe('mock', function () {
                     //console.log(response.result);
                     expect(response.result).to.exist();
                     expect(response.statusCode).to.equal(200);
-                    server.stop();
+                    server.stop(Hoek.ignore);
                     done();
                 });
             });
@@ -70,7 +71,7 @@ describe('mock', function () {
                     //console.log(response.result);
                     expect(response.result).to.exist();
                     expect(response.statusCode).to.equal(200);
-                    server.stop();
+                    server.stop(Hoek.ignore);
                     done();
                 });
             });
@@ -102,7 +103,7 @@ describe('mock', function () {
                     //console.log(response.result);
                     expect(response.result.trim()).to.equal('error');
                     expect(response.statusCode).to.equal(200);
-                    server.stop();
+                    server.stop(Hoek.ignore);
                     done();
                 });
             });
@@ -127,7 +128,7 @@ describe('mock', function () {
 
                     expect(response.statusCode).to.equal(200);
                     expect(response.result).to.equal('');
-                    server.stop();
+                    server.stop(Hoek.ignore);
                     done();
                 });
             });
@@ -153,7 +154,7 @@ describe('mock', function () {
 
                     //console.log(response.result);
                     expect(response.result).to.be.true();
-                    server.stop();
+                    server.stop(Hoek.ignore);
                     done();
                 });
             });
@@ -178,7 +179,7 @@ describe('mock', function () {
 
                     //console.log(response.result);
                     expect(response.result).to.be.false();
-                    server.stop();
+                    server.stop(Hoek.ignore);
                     done();
                 });
             });
@@ -203,7 +204,7 @@ describe('mock', function () {
 
                     //console.log(response.result);
                     expect(response.result).to.not.exist();
-                    server.stop();
+                    server.stop(Hoek.ignore);
                     done();
                 });
             });
